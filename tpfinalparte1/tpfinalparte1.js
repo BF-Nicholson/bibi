@@ -8,7 +8,7 @@ let cimagenes = 22;
 let imagenes = [];
 let myfuckingfont;
 let estado = 1;
-let dialogos = [];
+let dialogo = [];
 let reproduccionAudio = false;
 let musica;
 let decisiones = [];
@@ -19,7 +19,7 @@ function preload() {
     imagenes[i] = loadImage("data/"+i+".jpeg")
   }
   myfuckingfont = loadFont('data/OpenSans-Light.ttf');
-  dialogos = loadStrings('data/dialogos.txt');
+  dialogo = loadStrings('data/dialogos.txt');
   soundFormats('mp3');
   musica = loadSound('data/cancion1.mp3');
   decisiones[5] = ['Seguir Jugando', 'Volver\naltrabajo']
@@ -45,7 +45,7 @@ function draw() {
   botonsiguiente();
   botoneleccion();
   elecciontriple(),
-  dialogo(2, 0, 255, 21, LEFT); 
+  dialogo(2, 0, 255, 21, LEFT, 2, 22, []); 
   
   //botonglobal(200, 0, width/2, height/2, 50, 50, 'hola', 20);
  
